@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.mmcomp.bytesocketplugin"
+    version="0.2.11">
+    <name>ByteSocketPlugin</name>
+    <description>The Socket Client Plugin that sends a byte array.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,socket,byte</keywords>
+    <repo></repo>
+    <issue></issue>
+    <js-module src="www/ByteSocketPlugin.js" name="ByteSocketPlugin">
+        <clobbers target="ByteSocketPlugin" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ByteSocketPlugin" >
+                <param name="android-package" value="ByteSocketPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/ByteSocketPlugin.java" target-dir="src/" />
+    </platform>
+</plugin>
